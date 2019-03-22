@@ -19,8 +19,8 @@ public class Array {
         
         //posso dichiararlo e inizializzarlo anche:
         int[] intNum2 = new int[100];
-        
-        //altro modo
+
+                //altro modo
         int[] arrNum3 = {10,20,50,30};
         
         
