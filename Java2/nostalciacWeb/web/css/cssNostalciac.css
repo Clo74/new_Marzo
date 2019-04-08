@@ -21,3 +21,26 @@ table.tabella th {
     background-color: blue;
     color: white;
 }
+
+.corpo input {
+    position: absolute;
+    border: solid 1px blue;
+    border-radius: 5%;
+    left: 100px;
+    width: 40%;
+}
+
+.corpo select {
+    position:absolute;
+}
+
+.corpo label {
+    position:absolute;
+    left: 10px;
+    width: 80px;
+    border-style: inset;
+}
+
+.corpo {
+    display: none;
+}
