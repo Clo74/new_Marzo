@@ -41,7 +41,7 @@ public class EsperienzaStore {
     
     public List<Esperienza> findByAnag(Integer anagId){
                             //select e from Corso e where e.sede.id= :sede_id order by e.nome
-        return em.createQuery("select e from Esperienza e where e.anagrafica.id=     :anag_id order by e.fine desc", Esperienza.class)
+        return em.createQuery("select e from Esperienza e where e.anagrafica.id=:anag_id order by e.fine desc", Esperienza.class)
                 .setParameter("anag_id", anagId)
                 .getResultList();
     }

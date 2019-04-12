@@ -5,10 +5,14 @@
  */
 
 
-function creaTabellaDaJson(oggJson, listaCampi, idTabella, classeTabella, contenitore = "body") {
+function creaTabellaDaJson(oggJson, listaCampi, idTabella, classeTabella, contenitore = "body", titolo) {
     let tabella = document.createElement("table")
     tabella.id = idTabella
     tabella.className = classeTabella  //da verif
+
+    let caption = document.createElement("caption")
+    caption.innerText = titolo
+    tabella.appendChild(caption);
 
     let vCampi = listaCampi.split(",")
 
@@ -40,10 +44,20 @@ function creaTabellaDaJson(oggJson, listaCampi, idTabella, classeTabella, conten
     document.querySelector(contenitore).append(tabella)
 }
 
-function creaTabellaDaJsonDB(oggJson, listaCampi, idTabella, classeTabella, contenitore = "body", nomeCampoId) {
+function creaTabellaDaJsonDB(oggJson,
+        listaCampi,
+        idTabella,
+        classeTabella,
+        contenitore = "body",
+        nomeCampoId,
+        titolo) {
     let tabella = document.createElement("table")
     tabella.id = idTabella
     tabella.className = classeTabella  //da verif
+
+    let caption = document.createElement("caption")
+    caption.innerText = titolo
+    tabella.appendChild(caption);
 
     let vCampi = listaCampi.split(",")
 
@@ -78,16 +92,16 @@ function creaTabellaDaJsonDB(oggJson, listaCampi, idTabella, classeTabella, cont
         cella = document.createElement("td");
         let span = document.createElement("span");
         span.classList.add("modificaDB");
-        span.innerHTML="M";
-        span.setAttribute("idRec",oggJson[i][nomeCampoId]);
+        span.innerHTML = "M";
+        span.setAttribute("idRec", oggJson[i][nomeCampoId]);
         cella.appendChild(span);
         rigaRecord.append(cella);
 
         cella = document.createElement("td");
         span = document.createElement("span");
         span.classList.add("deleteDB");
-        span.innerHTML="D";
-        span.setAttribute("idRec",oggJson[i][nomeCampoId]);
+        span.innerHTML = "D";
+        span.setAttribute("idRec", oggJson[i][nomeCampoId]);
         cella.appendChild(span);
         rigaRecord.append(cella);
 
@@ -104,6 +118,7 @@ function creaTabellaDaJsonDB(oggJson, listaCampi, idTabella, classeTabella, cont
  * @param {type} name = del radio button
  * @returns la proprieta value del radio button che gli passo
  */
+       
 function getValueRadioButton(name) {
     var valore = "";
     document.querySelectorAll("[name=" + name + "]").forEach(function (el) {

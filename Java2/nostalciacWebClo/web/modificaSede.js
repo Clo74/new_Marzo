@@ -22,7 +22,7 @@ function caricaSedi() {
             })
             .then(json => {
                 document.querySelector("#contenitore").innerHTML = "";
-                creaTabellaDaJsonDB(json, "nome,indirizzo,telefono,citta,email,note", "tab1", "tabella", "#contenitore", "id");
+                creaTabellaDaJsonDB(json, "nome,indirizzo,telefono,citta,email,note", "tab1", "pure-table pure-table-bordered", "#contenitore", "id", "Sedi");
                 jsonSedi = json;
             })
             .then(e => caricaSelect())
@@ -108,18 +108,6 @@ function riempiCampi(idRecord) {
 
 
 
-//    let idSede = jsonSedi[value].id;
-//    let nome = jsonSedi[value].nome;
-//    let indirizzo = jsonSedi[value].indirizzo;
-//    let tel = jsonSedi[value].tel;
-//    let citta = jsonSedi[value].citta;
-//    let mail = jsonSedi[value].mail;
-//    let note = jsonSedi[value].note;
-
-    //alternativa      
-    //let idTag = opzioneSelezionata.getAttribute("idTag")
-    //let tipo = opzioneSelezionata.getAttribute("tipo")
-    //let tag = opzioneSelezionata.getAttribute("tag")
     if (trovato == true) {
         document.querySelector(".corpo").style.display = "block"
 

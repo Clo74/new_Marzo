@@ -7,14 +7,11 @@ package it.ciacformazione.nostalciac.services;
 
 import it.ciacformazione.nostalciac.business.CorsoStore;
 import it.ciacformazione.nostalciac.business.SedeStore;
-import it.ciacformazione.nostalciac.business.TagStore;
 import it.ciacformazione.nostalciac.entity.Corso;
 import it.ciacformazione.nostalciac.entity.Sede;
 import it.ciacformazione.nostalciac.entity.Tag;
 import java.net.URI;
 import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
